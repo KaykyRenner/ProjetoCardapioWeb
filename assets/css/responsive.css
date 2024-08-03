@@ -17,9 +17,8 @@
     .containerDosProdutos ul li img{
         width: 300px;
     }
-    .containerDoCarrinho,header {
+    .containerDoCarrinho {
         width: 100%;
-        text-align: left;
     }
     .containerDosProdutos ul li button{
         height: 42px;

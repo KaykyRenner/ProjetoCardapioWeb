@@ -3,18 +3,32 @@
     padding: 0;
     box-sizing:border-box ;
 }
+body{
+    background-color: #f3f2f1de;
+}
 .container{
+    
     width: 1000px;
     margin: 0 auto;
     display: flex;
+    padding-top: 50px;
 }
 .containerDosProdutos{
-    padding-top: 50px;
     
 }
 .containerDoCarrinho{
+    background-color: white;
+    height: 100%;
     width: 500px;
-    padding-top: 50px;
+    
+}
+.ListaDeComida{
+    list-style: none;
+}
+.containerDoCarrinho p{
+    color:rgba(209, 138, 5, 0.918) ;
+    font-weight: bolder;
+    font-size: 25px;
 }
 .containerDosProdutos header{
     font-size: 40px;
@@ -35,6 +49,8 @@
     width: 250px;
 }
 .containerDosProdutos ul li button{
+    background-color: white;
+    border: 1px solid rgba(255, 166, 0, 0.253);
     left: 45px;
     position: absolute;
     text-align: center;
@@ -44,4 +60,22 @@
     top: 235px;
     border-radius: 20px;
     cursor: pointer;
+}
+.containerDosProdutos ul li button p{
+    position: absolute;
+    display: inline;
+    top: 12px;
+    left: 68px;
+}
+.containerDosProdutos ul li button span{
+    font-weight: 300;
+    color: rgb(184, 120, 2);
+    position: absolute;
+    text-align: left;
+    left: 40px;
+    top: 6px;
+}
+.preço{
+    color: orange;
+    padding-top: 5px;
 }
