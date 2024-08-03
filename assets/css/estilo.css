@@ -23,6 +23,7 @@ body{
     
 }
 .ListaDeComida{
+    padding-top: 10px;
     list-style: none;
 }
 .containerDoCarrinho p{
