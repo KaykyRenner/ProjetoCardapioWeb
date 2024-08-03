@@ -36,5 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const total = cart.reduce((sum, item) => sum + parseFloat(item.price), 0).toFixed(2);
     quantityElement.textContent = `Your Cart (${cart.length})/
     Total: $${total}`;
+    quantityElement.setAttribute('class','PreçoEItem')
   }
 });

@@ -23,10 +23,11 @@ body{
     width: 500px;
     
 }
-.ListaDeComida{
+.ListaDeComida,.PreçoEItem,.item{
     padding: 10px;
     list-style: none;
 }
+
 .containerDoCarrinho p{
     color:rgba(209, 138, 5, 0.918) ;
     font-weight: bolder;
