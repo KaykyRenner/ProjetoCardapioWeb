@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box ;
+}
+.container{
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+}
+.containerDosProdutos{
+    padding-top: 50px;
+    
+}
+.containerDoCarrinho{
+    width: 500px;
+    padding-top: 50px;
+}
+.containerDosProdutos header{
+    font-size: 40px;
+}
+.containerDosProdutos ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.containerDosProdutos ul li{
+    padding-top: 20px;
+    position: relative;
+    flex: 1 0 30%;
+    margin: 10px;
+}
+.containerDosProdutos ul li img{
+    border-radius: 5px;
+    width: 250px;
+}
+.containerDosProdutos ul li button{
+    left: 45px;
+    position: absolute;
+    text-align: center;
+    width: 65%;
+    height: 40px;
+    right: 30px;
+    top: 235px;
+    border-radius: 20px;
+    cursor: pointer;
+}

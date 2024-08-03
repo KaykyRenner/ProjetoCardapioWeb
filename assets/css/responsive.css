@@ -1,0 +1,29 @@
+@media screen and (max-width: 768px) {
+    .container{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+    .containerDosProdutos ul{
+        
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column; 
+    }
+    .containerDosProdutos ul li {
+        width: 100%;
+        padding: 0px;
+    }
+    .containerDosProdutos ul li img{
+        width: 300px;
+    }
+    .containerDoCarrinho,header {
+        width: 100%;
+        text-align: left;
+    }
+    .containerDosProdutos ul li button{
+        height: 42px;
+        left: 50px;
+        top: 265px;
+    }
+} 

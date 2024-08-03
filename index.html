@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="assets/css/estilo.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Product list with cart</title>
@@ -15,60 +17,96 @@
   </style>
 </head>
 <body>
-
-  Desserts
-
-  Waffle with Berries
-  Waffle
-  6.50
-  Add to Cart
-
-  Vanilla Bean Crème Brûlée
-  Crème Brûlée
-  7.00
-  Add to Cart
-
-  Macaron Mix of Five
-  Macaron
-  8.00
-  Add to Cart
-
-  Classic Tiramisu
-  Tiramisu
-  5.50
-  Add to Cart
-
-  Pistachio Baklava
-  Baklava
-  4.00
-  Add to Cart
-
-  Lemon Meringue Pie
-  Pie
-  5.00
-  Add to Cart
-
-  Red Velvet Cake
-  Cake
-  4.50
-  Add to Cart
-
-  Salted Caramel Brownie
-  Brownie
-  4.50
-  Add to Cart
-
-  Vanilla Panna Cotta
-  Panna Cotta
-  6.50
-  Add to Cart
-
-  Your Cart (<!-- Quantity -->)
-  Your added items will appear here
+<div class="container">
+    <div class="containerDosProdutos">
+      <header>
+        Desserts
+      </header>
+        <ul>
+          <li>
+            <img src="assets/images/image-waffle-desktop.jpg" alt=""> <br>
+            <button>Add to Cart </button> <br>
+            Waffle <br>
+            Waffle with Berries <br>
+            6.50
+          </li>
+          
+          <li>
+            <img src="assets/images/image-creme-brulee-desktop.jpg" alt=""> <br>
+            <button> <span class="material-symbols-outlined">
+              add_shopping_cart
+              </span>Add to Cart </button> <br>
+            Crème Brûlée <br>
+            Vanilla Bean Crème Brûlée <br>
+            7.00
+          </li>
+          
+          <li>
+            <img src="assets/images/image-macaron-desktop.jpg" alt=""> <br>
+            <button>Add to Cart </button> <br>
+            Macaron <br>
+            Macaron Mix of Five <br>
+            8.00
+          </li>
+          
+          <li>
+            <img src="assets/images/image-tiramisu-desktop.jpg" alt=""> <br>
+            <button>Add to Cart </button> <br>
+            Tiramisu <br>
+            Classic Tiramisu <br>
+            5.50
+          </li>
+          
+          <li>
+            <img src="assets/images/image-baklava-desktop.jpg" alt=""> <br>
+            <button>Add to Cart </button> <br>
+            Baklava <br>
+            Pistachio Baklava <br>
+            4.00
+          </li>
+          
+          <li> <img src="assets/images/image-meringue-desktop.jpg" alt=""> <br>
+            <button>Add to Cart </button> <br>
+            Pie <br>
+            Lemon Meringue Pie <br>
+            5.00
+          </li>
+          
+          <li>
+            <img src="assets/images/image-cake-desktop.jpg" alt=""> <br>
+            <button>Add to Cart </button> <br>
+            Cake <br>
+            Red Velvet Cake <br>
+            4.50
+          </li>
+          
+          <li>
+            <img src="assets/images/image-brownie-desktop.jpg" alt=""> <br>
+            <button>Add to Cart </button> <br>
+            Brownie <br>
+            Salted Caramel Brownie <br>
+            4.50
+          </li>
+          
+          <li>
+            <img src="assets/images/image-panna-cotta-desktop.jpg" alt=""> <br>
+            <button>Add to Cart </button> <br>
+            Panna Cotta <br>
+            Vanilla Panna Cotta <br>
+            6.50
+          </li>
+          
+        </ul>
+    </div>
+    <div class="containerDoCarrinho">
+      Your Cart (<!-- Quantity -->)
+    </div>
+</div>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="assets/js/arquivo.js"></script>
 </body>
 </html>
