@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cart.forEach(item => {
       const listItem = document.createElement('li');
       listItem.setAttribute('class', 'ListaDeComida')
-      listItem.textContent = ` ${item.id}, Price: $${item.price}`;
+      listItem.textContent =  `${item.id}, Price: $${item.price};`
       cartElement.appendChild(listItem);
     });
     
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const quantityElement = document.querySelector('.containerDoCarrinho p');
     const total = cart.reduce((sum, item) => sum + parseFloat(item.price), 0).toFixed(2);
     quantityElement.textContent = `Your Cart (${cart.length})/
-    Total: $${total}`;
+    Total: $${total}`
     quantityElement.setAttribute('class','PreçoEItem')
   }
-});
+}); 
