@@ -64,6 +64,24 @@ body{
     border-radius: 20px;
     cursor: pointer;
 }
+.buttonAddCoisas{
+    display: none;
+    background-color: orange;
+    border: 1px solid rgba(255, 166, 0, 0.253);
+    left: 45px;
+    position: absolute;
+    text-align: center;
+    width: 65%;
+    height: 40px;
+    right: 30px;
+    top: 235px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.buttonAddCoisas .ButtonMenos{
+    position: absolute;
+    left: 100px;
+}
 .containerDosProdutos ul li button p{
     position: absolute;
     display: inline;
