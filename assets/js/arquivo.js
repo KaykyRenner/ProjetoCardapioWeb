@@ -1,6 +1,7 @@
 const ul = document.querySelector('.tarefas')
 let contador = 0
 let valorItem = 0
+let ContadorAdd = 1
 function CreatLi(){
   const li = document.createElement('li')
   return li
@@ -20,9 +21,24 @@ function EsconderEMostrarButton(comprar, add){
   if(comprar)add1.style.display = 'inline-block'
   if(add)comprar1.style.display = 'none'
 }
+function ApertandoMais(mais){
+  const buttonMais = document.querySelector(mais)
+}
 document.addEventListener('click', e =>{
   const el = e.target;
   const item = document.querySelector('.item')
+  if(el.classList.contains('ButtonMais')){
+    valorItem+=6.50
+    ContadorAdd++
+    const quantidade = document.querySelector('.quantidade')
+    quantidade.innerHTML = ContadorAdd
+  }
+  if(el.classList.contains('ButtonMenos')){
+    valorItem-=6.50
+    ContadorAdd--
+    const quantidade = document.querySelector('.quantidade')
+    quantidade.innerHTML = ContadorAdd
+  }
   if(el.classList.contains('comprar1')){
     EsconderEMostrarButton('.comprar1','.add1')
     addLiEmUL('Waffle with Berries')
