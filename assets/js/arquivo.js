@@ -1,7 +1,7 @@
 const ul = document.querySelector('.tarefas')
 let contador = 0
 let valorItem = 0
-let ContadorAdd = 1
+let contadorAdd = 1
 function CreatLi(){
   const li = document.createElement('li')
   return li
@@ -27,17 +27,113 @@ function ApertandoMais(mais){
 document.addEventListener('click', e =>{
   const el = e.target;
   const item = document.querySelector('.item')
-  if(el.classList.contains('ButtonMais')){
+  if(el.classList.contains('ButtonMais1')){
     valorItem+=6.50
-    ContadorAdd++
-    const quantidade = document.querySelector('.quantidade')
-    quantidade.innerHTML = ContadorAdd
+    contadorAdd++
+    const quantidade = document.querySelector('.quantidade1')
+    quantidade.innerHTML = contadorAdd
   }
-  if(el.classList.contains('ButtonMenos')){
+  if(el.classList.contains('ButtonMenos1')){
     valorItem-=6.50
-    ContadorAdd--
-    const quantidade = document.querySelector('.quantidade')
-    quantidade.innerHTML = ContadorAdd
+    contadorAdd--
+    const quantidade = document.querySelector('.quantidade1')
+    quantidade.innerHTML = contadorAdd
+  }
+  if(el.classList.contains('ButtonMais2')){
+    valorItem+=7.00
+    contadorAdd++
+    const quantidade = document.querySelector('.quantidade2')
+    quantidade.innerHTML = contadorAdd
+  }
+  if(el.classList.contains('ButtonMenos2')){
+    valorItem-=7.00
+    contadorAdd--
+    const quantidade = document.querySelector('.quantidade2')
+    quantidade.innerHTML = contadorAdd
+  }
+  if(el.classList.contains('ButtonMais3')){
+    valorItem+=8.00
+    contadorAdd++
+    const quantidade = document.querySelector('.quantidade3')
+    quantidade.innerHTML = contadorAdd
+  }
+  if(el.classList.contains('ButtonMenos3')){
+    valorItem-=8.00
+    contadorAdd--
+    const quantidade = document.querySelector('.quantidade3')
+    quantidade.innerHTML = contadorAdd
+  }
+  if(el.classList.contains('ButtonMais4')){
+    valorItem+=5.50
+    contadorAdd++
+    const quantidade = document.querySelector('.quantidade4')
+    quantidade.innerHTML = contadorAdd
+  }
+  if(el.classList.contains('ButtonMenos4')){
+    valorItem-=5.50
+    contadorAdd--
+    const quantidade = document.querySelector('.quantidade4')
+    quantidade.innerHTML = contadorAdd
+  }
+  if(el.classList.contains('ButtonMais5')){
+    valorItem+=4.00
+    contadorAdd++
+    const quantidade = document.querySelector('.quantidade5')
+    quantidade.innerHTML = contadorAdd
+  }
+  if(el.classList.contains('ButtonMenos5')){
+    valorItem-=4.00
+    contadorAdd--
+    const quantidade = document.querySelector('.quantidade5')
+    quantidade.innerHTML = contadorAdd
+  }
+  if(el.classList.contains('ButtonMais6')){
+    valorItem+=5.00
+    contadorAdd++
+    const quantidade = document.querySelector('.quantidade6')
+    quantidade.innerHTML = contadorAdd
+  }
+  if(el.classList.contains('ButtonMenos6')){
+    valorItem-=5.00
+    contadorAdd--
+    const quantidade = document.querySelector('.quantidade6')
+    quantidade.innerHTML = contadorAdd
+  }
+  if(el.classList.contains('ButtonMais7')){
+    valorItem+=4.50
+    contadorAdd++
+    const quantidade = document.querySelector('.quantidade7')
+    quantidade.innerHTML = contadorAdd
+  }
+  if(el.classList.contains('ButtonMenos7')){
+    valorItem-=4.50
+    contadorAdd--
+    const quantidade = document.querySelector('.quantidade7')
+    quantidade.innerHTML = contadorAdd
+  }
+  if(el.classList.contains('ButtonMais8')){
+    valorItem+=4.50
+    contadorAdd++
+    const quantidade = document.querySelector('.quantidade8')
+    quantidade.innerHTML = contadorAdd
+  }
+  if(el.classList.contains('ButtonMenos8')){
+    valorItem-=4.50
+    contadorAdd--
+    const quantidade = document.querySelector('.quantidade8')
+    quantidade.innerHTML = contadorAdd
+  }
+  if(el.classList.contains('ButtonMais9')){
+    valorItem+=6.50
+    contadorAdd++
+    const quantidade = document.querySelector('.quantidade9')
+    quantidade.innerHTML = contadorAdd
+  }
+  if(el.classList.contains('ButtonMenos9')){
+    valorItem-=6.50
+    contadorAdd--
+    const quantidade = document.querySelector('.quantidade9')
+    quantidade.innerHTML = contadorAdd
   }
   if(el.classList.contains('comprar1')){
     EsconderEMostrarButton('.comprar1','.add1')
