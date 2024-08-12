@@ -27,7 +27,9 @@ body{
     padding: 10px;
     list-style: none;
 }
-
+.Valores{
+    padding: 10px 10px 0px 10px;
+}
 .containerDoCarrinho p{
     color:rgba(209, 138, 5, 0.918) ;
     font-weight: bolder;
