@@ -9,8 +9,8 @@ let arrayItemMostrar = Array.from(document.querySelectorAll('button.buttonAddCoi
 let arrayAdd = Array.from(document.querySelectorAll('span.ButtonMenos'));
 let arrayRemove = Array.from(document.querySelectorAll('span.ButtonMais'));
 let arrayQuantidade = Array.from(document.querySelectorAll('.quantidade'));
-console.log(arrayQuantidade)
-let contador = new Array(listaValueItem.length).fill(1);
+console.log(arrayQuantidade,arrayAdd,arrayRemove)
+let contador = new Array(listaValueItem.length).fill(0);
 
 arrayClickCarrinho.forEach((button,index) => {
     button.setAttribute('data-index', index);
@@ -25,9 +25,9 @@ arrayClickCarrinho.forEach(button=>{
         const index = clickedButton.getAttribute('data-index');
         let RecebeArraySeparado = arrayClickCarrinho[index];
         let recebeMostrarItem = arrayItemMostrar[index];
-        executarfuncao(RecebeArraySeparado,recebeMostrarItem);
         addLiEmUL(listaNameItem[index])
-        adicionarValoresItem(listaValueItem[index],true)
+        executarfuncao(RecebeArraySeparado,recebeMostrarItem);
+        adicionarValoresItem(listaValueItem[index],true,index)
     }
     )
 })
@@ -51,14 +51,17 @@ function executarfuncao(ocultar,mostrar){
 
 function adicionarValoresItem(valor, adicionar = true, index){
     let valorAtual = parseFloat(item.innerHTML) || 0;
-    let novoValor = adicionar? valorAtual + valor : valorAtual - valor
-    if(novoValor<0) novoValor = 0
-    item.innerHTML = `${novoValor.toFixed(2)}`
     if(adicionar){
-        contador[index]++
-    } else {
-        contador[index] =  Math.max(contador[index] -1, 0 )
-    }
+        valorAtual+=valor;
+        contador[index]++;
+    } 
+    else{if(contador[index]>0){
+        valorAtual-=valor;
+        contador[index] =  Math.max(contador[index] -1, 0 );
+    }}
+    
+    if(valorAtual < 0) valorAtual=0;
+    item.innerHTML = `${valorAtual.toFixed(2)}`
     arrayQuantidade[index].innerHTML = contador[index]
 }
 
