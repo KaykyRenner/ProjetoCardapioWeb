@@ -1,4 +1,7 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{  
+    font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing:border-box ;
@@ -21,13 +24,31 @@ body{
     background-color: white;
     height: 100%;
     width: 500px;
-    
+}
+.linkDoPedido{
+    padding: 10px;
+    text-decoration: none;
+}
+.confirmaPedido{
+        border: none;
+        cursor: pointer;
+        width: 130px;
+        height: 40px;
+        border-radius: 20px;
+        display: block;
+        margin: 0 auto;
+        background-color:orangered;
+        color: white;
+        display: none;
+}
+.confirmaPedido:hover{
+    background-color: rgb(196, 53, 1);
 }
 .ListaDeComida,.PreçoEItem,.item{
     padding: 10px;
     list-style: none;
 }
-.Valores{
+.Valores,.ValoresC{
     padding: 10px 10px 0px 10px;
 }
 .containerDoCarrinho p{
@@ -53,10 +74,11 @@ body{
     border-radius: 5px;
     width: 250px;
 }
-.containerDosProdutos ul li button{
-    background-color: white;
+.buttonAddCoisas{
+    display: none;
+    background-color:orangered;
     border: 1px solid rgba(255, 166, 0, 0.253);
-    left: 45px;
+    left: 40px;
     position: absolute;
     text-align: center;
     width: 65%;
@@ -66,11 +88,10 @@ body{
     border-radius: 20px;
     cursor: pointer;
 }
-.buttonAddCoisas{
-    display: none;
-    background-color: orange;
+.containerDosProdutos ul li .comprarUnico{
+    background-color: rgb(255, 255, 255);
     border: 1px solid rgba(255, 166, 0, 0.253);
-    left: 45px;
+    left: 40px;
     position: absolute;
     text-align: center;
     width: 65%;
@@ -79,10 +100,37 @@ body{
     top: 235px;
     border-radius: 20px;
     cursor: pointer;
+}
+.quantidade{
+    color: white;
+}
+.ButtonMenos, .ButtonMais{
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    font-weight: 300;
+    position: absolute;
+    text-align: left;
+    left: 40px;
+    top: 6px;
+}
+.ButtonMenos:hover, .ButtonMais:hover{
+    background-color: white;
+    color: rgb(184, 120, 2);
+}
+.buttonAddCoisas .ButtonMais{
+    position: absolute;
+    left: 130px;
+
+}
+.buttonAddCoisas .quantidade{
+    position: absolute;
+    left: 75px;
 }
 .buttonAddCoisas .ButtonMenos{
     position: absolute;
-    left: 100px;
+    left: 10px;
+
 }
 .containerDosProdutos ul li button p{
     position: absolute;
@@ -90,7 +138,7 @@ body{
     top: 12px;
     left: 68px;
 }
-.containerDosProdutos ul li button span{
+.containerDosProdutos ul li button .imgCarrinho{
     font-weight: 300;
     color: rgb(184, 120, 2);
     position: absolute;

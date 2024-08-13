@@ -10,7 +10,9 @@ let arrayAdd = Array.from(document.querySelectorAll('span.ButtonMenos'));
 let arrayRemove = Array.from(document.querySelectorAll('span.ButtonMais'));
 let arrayQuantidade = Array.from(document.querySelectorAll('.quantidade'));
 let contador = new Array(listaValueItem.length).fill(0);
-
+const Carrinho = document.querySelector('.ValoresC')
+let contadorGlobal = 0
+let confirmarPedido = document.querySelector('.confirmaPedido')
 arrayClickCarrinho.forEach((button,index) => {
     button.setAttribute('data-index', index);
     button.querySelectorAll('*').forEach(child => {
@@ -24,8 +26,9 @@ arrayClickCarrinho.forEach(button=>{
         const index = clickedButton.getAttribute('data-index');
         let RecebeArraySeparado = arrayClickCarrinho[index];
         let recebeMostrarItem = arrayItemMostrar[index];
+        let mostrarButton = confirmarPedido;
         addLiEmUL(listaNameItem[index],index)
-        executarfuncao(RecebeArraySeparado,recebeMostrarItem);
+        executarfuncao(RecebeArraySeparado,recebeMostrarItem,mostrarButton);
         adicionarValoresItem(listaValueItem[index],true,index)
     }
     )
@@ -36,15 +39,27 @@ function CreatLi(){
     return li;
 }
 
-function addLiEmUL(comida){
+function addLiEmUL(comida,index){
     const li = CreatLi();
     li.setAttribute('class', 'ListaDeComida');
+
+    const comidaSpan = document.createElement('span')
+    comidaSpan.innerHTML = comida
+
+    const contadorSpan = document.createElement('span')
+    contadorSpan.setAttribute('class','contador')
+    contadorSpan.innerHTML =  `(${contador[index]})`
+
+    li.appendChild(comidaSpan)
+    li.appendChild(contadorSpan)
     ul.appendChild(li);
-    li.innerHTML = `${comida}`;
+
 }
-function executarfuncao(ocultar,mostrar){
+
+function executarfuncao(ocultar,mostrar,MostraConfirmaPedido){
     ocultar.style.display = 'none';
     mostrar.style.display = 'inline-block';
+    MostraConfirmaPedido.style.display = 'block';
 }
 
 function adicionarValoresItem(valor, adicionar = true, index){
@@ -52,16 +67,26 @@ function adicionarValoresItem(valor, adicionar = true, index){
     if(adicionar){
         valorAtual+=valor;
         contador[index]++;
+        contadorGlobal++
     } 
     else{if(contador[index]>0){
         valorAtual-=valor;
         contador[index] =  Math.max(contador[index] -1, 0 );
+        contadorGlobal--
     }}
     if(valorAtual < 0) valorAtual=0;
     item.innerHTML = `${valorAtual.toFixed(2)}`
-    arrayQuantidade[index].innerHTML = contador[index]
     
-
+    document.querySelectorAll('.ListaDeComida').forEach((li)=>{
+        const comidaSpan = li.querySelector('span')
+        const contadorSpan = li.querySelector('.contador')
+        if(comidaSpan.innerHTML === listaNameItem[index]){
+            contadorSpan.innerHTML = `(${contador[index]}x)`
+        }
+    });
+    arrayQuantidade[index].innerHTML = contador[index]
+    Carrinho.innerHTML = `Carrinho (${contadorGlobal}) items`
+    console.log(contador)
 }
 
 function ConfigurandoAddERemove(){
